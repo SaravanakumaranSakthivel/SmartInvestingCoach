@@ -19,6 +19,8 @@
 		43117B3F266DA25200D5D0EC /* AchievementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B3E266DA25200D5D0EC /* AchievementsPresenter.swift */; };
 		43117B44266DA2CD00D5D0EC /* AchievementsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B43266DA2CD00D5D0EC /* AchievementsEntity.swift */; };
 		43117B49266DA39800D5D0EC /* AchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B48266DA39800D5D0EC /* AchievementsInteractor.swift */; };
+		43AD0D1F266DAFE000C6A8B7 /* AchivementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AD0D1D266DAFE000C6A8B7 /* AchivementCell.swift */; };
+		43AD0D20266DAFE000C6A8B7 /* AchivementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43AD0D1E266DAFE000C6A8B7 /* AchivementCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		43117B3E266DA25200D5D0EC /* AchievementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsPresenter.swift; sourceTree = "<group>"; };
 		43117B43266DA2CD00D5D0EC /* AchievementsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsEntity.swift; sourceTree = "<group>"; };
 		43117B48266DA39800D5D0EC /* AchievementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractor.swift; sourceTree = "<group>"; };
+		43AD0D1D266DAFE000C6A8B7 /* AchivementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchivementCell.swift; sourceTree = "<group>"; };
+		43AD0D1E266DAFE000C6A8B7 /* AchivementCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchivementCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 		43117B20266D971C00D5D0EC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				43AD0D1D266DAFE000C6A8B7 /* AchivementCell.swift */,
+				43AD0D1E266DAFE000C6A8B7 /* AchivementCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			files = (
 				43117AF3266D953D00D5D0EC /* LaunchScreen.storyboard in Resources */,
 				43117AF0266D953D00D5D0EC /* Assets.xcassets in Resources */,
+				43AD0D20266DAFE000C6A8B7 /* AchivementCell.xib in Resources */,
 				43117B2F266D982A00D5D0EC /* AchievementsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +363,7 @@
 				43117B3F266DA25200D5D0EC /* AchievementsPresenter.swift in Sources */,
 				43117B49266DA39800D5D0EC /* AchievementsInteractor.swift in Sources */,
 				43117B44266DA2CD00D5D0EC /* AchievementsEntity.swift in Sources */,
+				43AD0D1F266DAFE000C6A8B7 /* AchivementCell.swift in Sources */,
 				43117AE9266D953B00D5D0EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

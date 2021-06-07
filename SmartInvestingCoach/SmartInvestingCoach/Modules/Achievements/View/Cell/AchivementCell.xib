@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="KGk-i7-Jjw" customClass="AchivementCell" customModule="SmartInvestingCoach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMB-Sy-AqP">
+                        <rect key="frame" x="10" y="10" width="300" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_bg_placeholder_image" translatesAutoresizingMaskIntoConstraints="NO" id="Rlu-bU-o9F">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02i-Yv-mly">
+                                <rect key="frame" x="100" y="10" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Oez-wc-lQR"/>
+                                    <constraint firstAttribute="height" constant="100" id="dcs-2X-VrL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WFf-ad-PcE">
+                                <rect key="frame" x="20" y="150" width="260" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="2gY-Iu-3hx"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Rlu-bU-o9F" secondAttribute="bottom" id="5NX-Ns-Afc"/>
+                            <constraint firstItem="02i-Yv-mly" firstAttribute="centerX" secondItem="WMB-Sy-AqP" secondAttribute="centerX" id="JKt-1M-8PJ"/>
+                            <constraint firstItem="02i-Yv-mly" firstAttribute="top" secondItem="WMB-Sy-AqP" secondAttribute="top" constant="10" id="SHX-j6-pZT"/>
+                            <constraint firstItem="WFf-ad-PcE" firstAttribute="leading" secondItem="WMB-Sy-AqP" secondAttribute="leading" constant="20" id="SgF-AZ-Aei"/>
+                            <constraint firstItem="Rlu-bU-o9F" firstAttribute="top" secondItem="WMB-Sy-AqP" secondAttribute="top" id="XtG-Sm-ef9"/>
+                            <constraint firstAttribute="trailing" secondItem="Rlu-bU-o9F" secondAttribute="trailing" id="cty-Me-aeX"/>
+                            <constraint firstAttribute="bottom" secondItem="WFf-ad-PcE" secondAttribute="bottom" constant="40" id="iYQ-r7-rxP"/>
+                            <constraint firstItem="Rlu-bU-o9F" firstAttribute="leading" secondItem="WMB-Sy-AqP" secondAttribute="leading" id="v16-2A-sHA"/>
+                            <constraint firstAttribute="trailing" secondItem="WFf-ad-PcE" secondAttribute="trailing" constant="20" id="zQ8-kZ-xKs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WMB-Sy-AqP" secondAttribute="bottom" constant="10" id="YPl-Si-NyQ"/>
+                    <constraint firstItem="WMB-Sy-AqP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cei-Vd-KSr"/>
+                    <constraint firstAttribute="trailing" secondItem="WMB-Sy-AqP" secondAttribute="trailing" constant="10" id="euV-id-Bfd"/>
+                    <constraint firstItem="WMB-Sy-AqP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qv3-ZJ-V1g"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgImageView" destination="Rlu-bU-o9F" id="f8F-cW-F58"/>
+                <outlet property="containerView" destination="WMB-Sy-AqP" id="Xqg-3x-11S"/>
+                <outlet property="levelLabel" destination="02i-Yv-mly" id="sIt-9B-tvO"/>
+                <outlet property="progressView" destination="WFf-ad-PcE" id="9E1-eb-bju"/>
+            </connections>
+            <point key="canvasLocation" x="-13" y="93"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cell_bg_placeholder_image" width="1200" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
