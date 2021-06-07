@@ -7,7 +7,16 @@
 
 import UIKit
 
-class AchievementsViewController: UIViewController {
+class AchievementsViewController: UIViewController, AnyView {
+    var presenter: AnyPresenter?
+    
+    func updateAchievements(with achievements: [Achievement], title: String) {
+        
+    }
+    
+    func updateAchievements(with error: String) {
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,3 +34,4 @@ class AchievementsViewController: UIViewController {
     */
 
 }
+

@@ -15,6 +15,10 @@
 		43117B09266D953D00D5D0EC /* SmartInvestingCoachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B08266D953D00D5D0EC /* SmartInvestingCoachUITests.swift */; };
 		43117B2E266D982A00D5D0EC /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B2C266D982A00D5D0EC /* AchievementsViewController.swift */; };
 		43117B2F266D982A00D5D0EC /* AchievementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43117B2D266D982A00D5D0EC /* AchievementsViewController.xib */; };
+		43117B37266D9CD400D5D0EC /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B36266D9CD400D5D0EC /* VIPERProtocols.swift */; };
+		43117B3F266DA25200D5D0EC /* AchievementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B3E266DA25200D5D0EC /* AchievementsPresenter.swift */; };
+		43117B44266DA2CD00D5D0EC /* AchievementsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B43266DA2CD00D5D0EC /* AchievementsEntity.swift */; };
+		43117B49266DA39800D5D0EC /* AchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B48266DA39800D5D0EC /* AchievementsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		43117B0A266D953D00D5D0EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43117B2C266D982A00D5D0EC /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		43117B2D266D982A00D5D0EC /* AchievementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementsViewController.xib; sourceTree = "<group>"; };
+		43117B36266D9CD400D5D0EC /* VIPERProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
+		43117B3E266DA25200D5D0EC /* AchievementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsPresenter.swift; sourceTree = "<group>"; };
+		43117B43266DA2CD00D5D0EC /* AchievementsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsEntity.swift; sourceTree = "<group>"; };
+		43117B48266DA39800D5D0EC /* AchievementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,7 @@
 		43117B1D266D96E800D5D0EC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				43117B36266D9CD400D5D0EC /* VIPERProtocols.swift */,
 				43117B24266D977A00D5D0EC /* Achievements */,
 			);
 			path = Modules;
@@ -171,6 +180,7 @@
 		43117B21266D972A00D5D0EC /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				43117B48266DA39800D5D0EC /* AchievementsInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -178,6 +188,7 @@
 		43117B22266D973E00D5D0EC /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				43117B43266DA2CD00D5D0EC /* AchievementsEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 		43117B25266D97A600D5D0EC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				43117B3E266DA25200D5D0EC /* AchievementsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -340,6 +352,10 @@
 			files = (
 				43117B2E266D982A00D5D0EC /* AchievementsViewController.swift in Sources */,
 				43117AE7266D953B00D5D0EC /* AppDelegate.swift in Sources */,
+				43117B37266D9CD400D5D0EC /* VIPERProtocols.swift in Sources */,
+				43117B3F266DA25200D5D0EC /* AchievementsPresenter.swift in Sources */,
+				43117B49266DA39800D5D0EC /* AchievementsInteractor.swift in Sources */,
+				43117B44266DA2CD00D5D0EC /* AchievementsEntity.swift in Sources */,
 				43117AE9266D953B00D5D0EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,7 +526,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6J29MK9BC;
-				INFOPLIST_FILE = SmartInvestingCoach/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SmartInvestingCoach/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +545,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6J29MK9BC;
-				INFOPLIST_FILE = SmartInvestingCoach/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SmartInvestingCoach/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
