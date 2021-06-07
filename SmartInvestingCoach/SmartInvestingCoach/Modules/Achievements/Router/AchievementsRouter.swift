@@ -15,7 +15,6 @@ class AchievementsRouter: AnyRouter {
         let router = AchievementsRouter()
         
         // Assign View, Interactor and Presenter
-        
         var view: AnyView = AchievementsViewController()
         var presenter: AnyPresenter = AchievementsPresenter()
         var interactor: AnyInteractor = AchievementsInteractor()
