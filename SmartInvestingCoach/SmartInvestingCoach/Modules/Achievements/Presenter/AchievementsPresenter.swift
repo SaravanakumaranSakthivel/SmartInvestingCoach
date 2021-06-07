@@ -22,8 +22,8 @@ class AchievementsPresenter: AnyPresenter {
        }
     }
     var view: AnyView?
-    
- 
+
+    // This recieve the information from the interactor and passes the state to view
     func interactorDidFetchAchievements(with result: Result<AchievementsResult, FetchError>) {
         switch result {
         case .success(let achievementsResult):

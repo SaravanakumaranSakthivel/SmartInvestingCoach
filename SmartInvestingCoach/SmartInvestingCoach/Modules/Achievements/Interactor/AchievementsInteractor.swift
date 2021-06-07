@@ -11,6 +11,7 @@ import Foundation
 class AchievementsInteractor: AnyInteractor {
     var presenter: AnyPresenter?
     
+    // Implemented interactor method to read the json response and this will update the state to the presenter. 
     func getAchievements() {
         if let achivementsData = self.readAchivementsJSON() {
             do {
@@ -26,6 +27,7 @@ class AchievementsInteractor: AnyInteractor {
         }
     }
     
+    // Helper method to read local json file
     private func readAchivementsJSON() -> Data? {
         do {
             if let bundlePath = Bundle.main.path(forResource: "achievements",
