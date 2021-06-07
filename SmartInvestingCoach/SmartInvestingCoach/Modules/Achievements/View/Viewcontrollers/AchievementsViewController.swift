@@ -35,13 +35,13 @@ class AchievementsViewController: UIViewController, AnyView {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        self.setupNavigationBar(with: "")
     }
     
     private func setupNavigationBar(with title:String) {
         self.title = title
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.412794888, green: 0.2138850689, blue: 0.8086236119, alpha: 1)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15),
+                                                                        NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     private func setUpTableView() {
@@ -60,15 +60,7 @@ extension AchievementsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AchivementCell
-        
-        let achivement = achievements[indexPath.row]
-        guard let level = achivement.level,
-              let bgImageUrl = achivement.bg_image_url,
-              let progress = achivement.progress,
-              let total = achivement.total else {
-            return cell ?? UITableViewCell()
-        }
-        cell?.updateCell(level: level, progress: progress, total: total, bgImgUrl: bgImageUrl)
+        cell?.updateCell(achievement: achievements[indexPath.row])
         return cell ?? UITableViewCell()
     }
 }

@@ -14,8 +14,8 @@
             filePath = "SmartInvestingCoach/Modules/Achievements/View/Viewcontrollers/AchievementsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "setupNavigationBar(with:)"
             landmarkType = "7">
          </BreakpointContent>
