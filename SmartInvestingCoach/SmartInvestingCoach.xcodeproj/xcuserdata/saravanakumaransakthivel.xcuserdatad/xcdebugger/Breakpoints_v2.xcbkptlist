@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ACAF3306-DE0F-4B22-989D-715E268C187F"
+            uuid = "D5CC0795-B3B6-4DF7-B67C-CE4D7F6E3133"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartInvestingCoach/Modules/Achievements/Presenter/AchievementsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "interactorDidFetchAchievements(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A211F3B-48A4-4C79-A820-90B1A4D385D9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartInvestingCoach/Modules/Achievements/View/Viewcontrollers/AchievementsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "setupNavigationBar(with:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "updateAchievements(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

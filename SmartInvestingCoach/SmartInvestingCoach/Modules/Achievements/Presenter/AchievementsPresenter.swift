@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum FetchError: Error {
+    case failed
+    case parsingError
+    case noData
+}
 
 class AchievementsPresenter: AnyPresenter {
     var router: AnyRouter?
@@ -18,14 +23,13 @@ class AchievementsPresenter: AnyPresenter {
     var view: AnyView?
     
  
-        
     func interactorDidFetchAchievements(with result: Result<AchievementsResult, Error>) {
         switch result {
         case .success(let achievementsResult):
             view?.updateAchievements(with: achievementsResult.overview?.title ?? "",
                                      achievements: achievementsResult.achievements ?? [])
-        case .failure(let error):
-            view?.updateAchievements(with :error.localizedDescription)
+        case .failure:
+            view?.updateAchievements(with :"Please try again later!!")
         }
         
     }

@@ -37,6 +37,8 @@ class AchivementCell: UITableViewCell {
         
         progressView.progressTintColor = .green
         progressView.trackTintColor = .white
+        progressView.layer.cornerRadius = 5.0
+        progressView.layer.masksToBounds = true
     }
     
     internal func updateCell(achievement: Achievement) {

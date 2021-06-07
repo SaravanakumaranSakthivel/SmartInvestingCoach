@@ -25,6 +25,14 @@ class AchievementsViewController: UIViewController, AnyView {
     
     func updateAchievements(with error: String) {
         print(error)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Something Went Wrong", message: error, preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                print("Ok button tapped")
+             })
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 

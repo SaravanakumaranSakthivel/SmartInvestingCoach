@@ -18,10 +18,10 @@ class AchievementsInteractor: AnyInteractor {
                 if achievementsResult.success ?? false {
                     self.presenter?.interactorDidFetchAchievements(with: .success(achievementsResult))
                 }else {
-                    self.presenter?.interactorDidFetchAchievements(with: .failure("Error in getting data" as! Error))
+                    self.presenter?.interactorDidFetchAchievements(with: .failure(FetchError.failed))
                 }
-            }catch let error {
-                self.presenter?.interactorDidFetchAchievements(with: .failure(error))
+            }catch {
+                self.presenter?.interactorDidFetchAchievements(with: .failure(FetchError.parsingError))
             }
         }
     }
@@ -33,8 +33,8 @@ class AchievementsInteractor: AnyInteractor {
                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                 return jsonData
             }
-        } catch let error {
-            print(error)
+        } catch {
+            self.presenter?.interactorDidFetchAchievements(with: .failure(FetchError.noData))
         }
         return nil
     }
