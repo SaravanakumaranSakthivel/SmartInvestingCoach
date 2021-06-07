@@ -14,6 +14,7 @@ class AchievementsViewController: UIViewController, AnyView {
     var presenter: AnyPresenter?
     var achievements: [Achievement] = []
     
+    // Presenter will communicate success state to the view through this method.
     func updateAchievements(with title: String, achievements: [Achievement]) {
         self.achievements = achievements
         DispatchQueue.main.async {
@@ -22,7 +23,7 @@ class AchievementsViewController: UIViewController, AnyView {
         }
     }
 
-    
+    // Presenter will communicate failure state to the view through this method.
     func updateAchievements(with error: FetchError) {
         print(error)
         var errorText = ""
@@ -79,6 +80,7 @@ extension AchievementsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AchivementCell
         cell?.updateCell(achievement: achievements[indexPath.row])
+        cell?.selectionStyle = .none
         return cell ?? UITableViewCell()
     }
 }

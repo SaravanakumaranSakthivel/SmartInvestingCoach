@@ -79,7 +79,7 @@ class AchivementCell: UITableViewCell {
     }
 }
 
-
+// FIXME: This can be updated with caching to avoid repeated image fetching.
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in
