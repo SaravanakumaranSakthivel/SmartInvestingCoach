@@ -22,7 +22,7 @@ protocol AnyPresenter {
     var interactor: AnyInteractor? { get set }
     var view: AnyView? { get set }
     
-    func interactorDidFetchAchievements(with result: Result<AchievementsResult, Error>)
+    func interactorDidFetchAchievements(with result: Result<AchievementsResult, FetchError>)
 }
 
 /*
@@ -41,5 +41,5 @@ protocol AnyView {
     var presenter: AnyPresenter? { get set }
     
     func updateAchievements(with title: String, achievements: [Achievement])
-    func updateAchievements(with error: String)
+    func updateAchievements(with error: FetchError)
 }

@@ -23,10 +23,20 @@ class AchievementsViewController: UIViewController, AnyView {
     }
 
     
-    func updateAchievements(with error: String) {
+    func updateAchievements(with error: FetchError) {
         print(error)
+        var errorText = ""
+        switch error {
+        case .failed:
+            errorText = "Error in fetching data!"
+        case .noData:
+            errorText = "No Data found!"
+        case .parsingError:
+            errorText = "Error in parsing data!"
+        }
+        
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Something Went Wrong", message: error, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Please Try again later!!", message: errorText, preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                 print("Ok button tapped")
              })

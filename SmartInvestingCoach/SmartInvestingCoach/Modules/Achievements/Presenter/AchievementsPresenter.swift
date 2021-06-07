@@ -14,6 +14,7 @@ enum FetchError: Error {
 }
 
 class AchievementsPresenter: AnyPresenter {
+    
     var router: AnyRouter?
     var interactor: AnyInteractor? {
         didSet{
@@ -23,13 +24,13 @@ class AchievementsPresenter: AnyPresenter {
     var view: AnyView?
     
  
-    func interactorDidFetchAchievements(with result: Result<AchievementsResult, Error>) {
+    func interactorDidFetchAchievements(with result: Result<AchievementsResult, FetchError>) {
         switch result {
         case .success(let achievementsResult):
             view?.updateAchievements(with: achievementsResult.overview?.title ?? "",
                                      achievements: achievementsResult.achievements ?? [])
-        case .failure:
-            view?.updateAchievements(with :"Please try again later!!")
+        case .failure(let error):
+            view?.updateAchievements(with :error)
         }
         
     }

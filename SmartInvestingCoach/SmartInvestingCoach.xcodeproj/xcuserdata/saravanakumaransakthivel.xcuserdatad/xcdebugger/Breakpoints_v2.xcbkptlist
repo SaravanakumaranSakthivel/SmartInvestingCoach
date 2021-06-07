@@ -14,8 +14,8 @@
             filePath = "SmartInvestingCoach/Modules/Achievements/Presenter/AchievementsPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "interactorDidFetchAchievements(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "updateAchievements(with:)"
-            landmarkType = "7">
+            landmarkName = "AchievementsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
