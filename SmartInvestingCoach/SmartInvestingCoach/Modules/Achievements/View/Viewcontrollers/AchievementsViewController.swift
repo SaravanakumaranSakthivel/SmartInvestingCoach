@@ -8,15 +8,23 @@
 import UIKit
 
 class AchievementsViewController: UIViewController, AnyView {
+    
     @IBOutlet weak var tableView: UITableView!
         
     var presenter: AnyPresenter?
+    var achievements: [Achievement] = []
     
-    func updateAchievements(with achievements: [Achievement], title: String) {
-        
+    func updateAchievements(with title: String, achievements: [Achievement]) {
+        self.achievements = achievements
+        DispatchQueue.main.async {
+            self.setupNavigationBar(with: title)
+            self.tableView.reloadData()
+        }
     }
+
     
     func updateAchievements(with error: String) {
+        print(error)
     }
     
 
@@ -27,7 +35,7 @@ class AchievementsViewController: UIViewController, AnyView {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.setupNavigationBar(with: "Smart Investing")
+//        self.setupNavigationBar(with: "")
     }
     
     private func setupNavigationBar(with title:String) {
@@ -47,11 +55,20 @@ class AchievementsViewController: UIViewController, AnyView {
 extension AchievementsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 //presenter?.getAchivementsListCount() ?? 0
+        return achievements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AchivementCell
+        
+        let achivement = achievements[indexPath.row]
+        guard let level = achivement.level,
+              let bgImageUrl = achivement.bg_image_url,
+              let progress = achivement.progress,
+              let total = achivement.total else {
+            return cell ?? UITableViewCell()
+        }
+        cell?.updateCell(level: level, progress: progress, total: total, bgImgUrl: bgImageUrl)
         return cell ?? UITableViewCell()
     }
 }

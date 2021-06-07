@@ -22,25 +22,23 @@ class AchivementCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     internal func setupView() {
         
         self.containerView.layer.cornerRadius = 8.0
         self.containerView.layer.masksToBounds = true
-        self.containerView.backgroundColor = .red
         
         self.levelLabel.layer.cornerRadius = levelLabel.frame.width/2
         levelLabel.layer.masksToBounds = true
         self.levelLabel.backgroundColor = .white
-        self.levelLabel.text = "Level \n 1"
     }
     
     internal func updateCell(level: String, progress: Int, total: Int, bgImgUrl: String) {
         levelLabel.text = "Level \n \(level)"
-        progressView.setProgress(Float(progress), animated: true)
+        progressView.progressTintColor = .green
+        progressView.trackTintColor = .white
+        progressView.progress = Float((Double(progress)/Double(total)))
         
         if let url = URL(string: bgImgUrl) {
             bgImageView.load(url: url)

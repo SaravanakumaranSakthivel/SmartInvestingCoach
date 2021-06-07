@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
+typealias EntryPoint = UIViewController
 protocol  AnyRouter {
+    var entry: EntryPoint? { get }
     static func start() -> AnyRouter
 }
 
@@ -37,6 +40,6 @@ protocol AnyInteractor {
 protocol AnyView {
     var presenter: AnyPresenter? { get set }
     
-    func updateAchievements(with achievements:[Achievement], title: String)
+    func updateAchievements(with title: String, achievements: [Achievement])
     func updateAchievements(with error: String)
 }

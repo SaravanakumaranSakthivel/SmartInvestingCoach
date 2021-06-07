@@ -21,6 +21,8 @@
 		43117B49266DA39800D5D0EC /* AchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43117B48266DA39800D5D0EC /* AchievementsInteractor.swift */; };
 		43AD0D1F266DAFE000C6A8B7 /* AchivementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AD0D1D266DAFE000C6A8B7 /* AchivementCell.swift */; };
 		43AD0D20266DAFE000C6A8B7 /* AchivementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43AD0D1E266DAFE000C6A8B7 /* AchivementCell.xib */; };
+		43AD0D2E266DB6EE00C6A8B7 /* AchievementsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AD0D2D266DB6EE00C6A8B7 /* AchievementsRouter.swift */; };
+		43AD0D3B266DC19E00C6A8B7 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 43AD0D3A266DC19E00C6A8B7 /* achievements.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		43117B48266DA39800D5D0EC /* AchievementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractor.swift; sourceTree = "<group>"; };
 		43AD0D1D266DAFE000C6A8B7 /* AchivementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchivementCell.swift; sourceTree = "<group>"; };
 		43AD0D1E266DAFE000C6A8B7 /* AchivementCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AchivementCell.xib; sourceTree = "<group>"; };
+		43AD0D2D266DB6EE00C6A8B7 /* AchievementsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsRouter.swift; sourceTree = "<group>"; };
+		43AD0D3A266DC19E00C6A8B7 /* achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = achievements.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		43117B19266D96D100D5D0EC /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				43AD0D3A266DC19E00C6A8B7 /* achievements.json */,
 				43117AF4266D953D00D5D0EC /* Info.plist */,
 				43117AE6266D953B00D5D0EC /* AppDelegate.swift */,
 				43117AE8266D953B00D5D0EC /* SceneDelegate.swift */,
@@ -202,6 +207,7 @@
 		43117B23266D976B00D5D0EC /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				43AD0D2D266DB6EE00C6A8B7 /* AchievementsRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43117AF3266D953D00D5D0EC /* LaunchScreen.storyboard in Resources */,
+				43AD0D3B266DC19E00C6A8B7 /* achievements.json in Resources */,
 				43117AF0266D953D00D5D0EC /* Assets.xcassets in Resources */,
 				43AD0D20266DAFE000C6A8B7 /* AchivementCell.xib in Resources */,
 				43117B2F266D982A00D5D0EC /* AchievementsViewController.xib in Resources */,
@@ -360,6 +367,7 @@
 				43117B2E266D982A00D5D0EC /* AchievementsViewController.swift in Sources */,
 				43117AE7266D953B00D5D0EC /* AppDelegate.swift in Sources */,
 				43117B37266D9CD400D5D0EC /* VIPERProtocols.swift in Sources */,
+				43AD0D2E266DB6EE00C6A8B7 /* AchievementsRouter.swift in Sources */,
 				43117B3F266DA25200D5D0EC /* AchievementsPresenter.swift in Sources */,
 				43117B49266DA39800D5D0EC /* AchievementsInteractor.swift in Sources */,
 				43117B44266DA2CD00D5D0EC /* AchievementsEntity.swift in Sources */,

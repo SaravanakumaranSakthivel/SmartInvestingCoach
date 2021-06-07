@@ -19,11 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         // Setup AchievementsViewcontroller as root view controller
-        let achievementsVC = AchievementsViewController()
+        let achievementsRouter = AchievementsRouter.start()
+        
         let window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
-        navigationController.viewControllers = [achievementsVC]
         window.rootViewController = navigationController
+        guard let startingVC = achievementsRouter.entry else {
+            return
+        }
+        navigationController.viewControllers = [startingVC]
         self.window = window
         window.makeKeyAndVisible()
     }
