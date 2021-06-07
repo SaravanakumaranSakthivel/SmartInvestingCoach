@@ -1,6 +1,6 @@
 # SmartInvestingCoach
 
-#Objective 
+## Objective 
 Implement the next iteration of the Stash Coach feature.  
 
 ## Feature
